@@ -4,22 +4,22 @@ class Vmn < Formula
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.2/vmn-macos-amd64.tar.gz"
-    sha256 "c340d4609849eb144b7366c2f689bd5b3bba4d8dec6d0f3fcca58057c3e92c8d"
+    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.3/vmn-macos-amd64.tar.gz"
+    sha256 "b8d177837d709ae082ce7cde396122721581a1146316befa44ecd4771c693266"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.2/vmn-macos-arm64.tar.gz"
-    sha256 "9d08bb80ab13bf7184e4ab5be93b7a447a596d1ce1b11c633eedad3395cae3f4"
+    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.3/vmn-macos-arm64.tar.gz"
+    sha256 "0ff268f0d13e95cf784eb877e6dca03ac27667c9cc156b55f5f8b65d02ae7957"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.2/vmn-linux-amd64.tar.gz"
-    sha256 "cc0f8753b9cde34dd1ceec39b9087a72e7922551c9f9e3291af86e001f60de4a"
+    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.3/vmn-linux-amd64.tar.gz"
+    sha256 "24dfa8ed8803ee90afe2c3a9b1707a139d89950f692d7d50742db07315fee9d7"
   end
 
   if OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.2/vmn-linux-arm64.tar.gz"
-    sha256 "eabe1f3fcf119ee45dc5d49881e2f0a779c74baf166a0c9e0f9fe594a4e95d11"
+    url "https://github.com/vineelsai26/VMN/releases/download/v0.2.3/vmn-linux-arm64.tar.gz"
+    sha256 "c14d5cbb610a0447285e7cf50b8285700d3d0a6d2400e01807f5d30b6718efee"
   end
 
   def install
