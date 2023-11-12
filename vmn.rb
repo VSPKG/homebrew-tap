@@ -1,4 +1,4 @@
-class Vmn < Formula
+class VMN < Formula
   desc "A CLI tool to manage your node and python versions"
   homepage "https://vineelsai.com"
   license "MIT"
