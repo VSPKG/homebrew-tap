@@ -1,4 +1,4 @@
-class RCE < Formula
+class Rce < Formula
   desc "A API to run code remotely"
   homepage "https://vineelsai.com"
   license "MIT"
