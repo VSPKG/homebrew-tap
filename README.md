@@ -15,10 +15,10 @@ brew tap vspkg/tap https://github.com/VSPKG/homebrew-tap.git
 Then install any of:
 
 ```sh
-brew install vspkg/tap/vmn        # Node.js version manager (release binaries)
-brew install --HEAD vspkg/tap/vmp # Python version manager (builds from source)
-brew install vspkg/tap/checkout   # project checkout CLI
-brew install vspkg/tap/rce        # remote code execution API
+brew install vspkg/tap/vmn       # Node.js version manager (release binaries)
+brew install vspkg/tap/vmp       # Python version manager (release binaries)
+brew install vspkg/tap/checkout  # project checkout CLI
+brew install vspkg/tap/rce       # remote code execution API
 brew install --cask vspkg/tap/downpour  # iCloud Drive / Photos backup app (macOS)
 ```
 

@@ -1,25 +1,26 @@
 class Rce < Formula
-  desc "A API to run code remotely"
+  desc "Run code remotely through an API"
   homepage "https://vineelsai.com"
+  version "1.5.1"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.0/rce-macos-amd64.tar.gz"
-    sha256 "0b49a11f073a8bd1281864b4e3740e58b0a3055f38301b107f07e948385a51e7"
+    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.1/rce-macos-amd64.tar.gz"
+    sha256 "774cd6879d4350f3a7096cedc3487857914c8485a6e271ef857bac50bacca708"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.0/rce-macos-arm64.tar.gz"
-    sha256 "b3ec5665818878f5744dd2c6712c98193f96960dd8ca10468865998e5eab32d5"
+    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.1/rce-macos-arm64.tar.gz"
+    sha256 "05ceca7e48838a776865b3f52feb20a8f0aa26567dda0e2602a65ccbd649783c"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.0/rce-linux-amd64.tar.gz"
-    sha256 "d291cf1cca08367adafa64508a74ce562e066b822d7d7f6098ed7cf31f0945d3"
+    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.1/rce-linux-amd64.tar.gz"
+    sha256 "716dcd59bda6a8fc464d04bf6ebe68b2215e0aafb9ae73b1aa5a7feceedf2755"
   end
 
   if OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.0/rce-linux-arm64.tar.gz"
-    sha256 "2b47702d99b9b918a3e317378967499c3202dada71be48b5f7ca18aa2fd1576f"
+    url "https://github.com/vineelsai26/RCE/releases/download/v1.5.1/rce-linux-arm64.tar.gz"
+    sha256 "a95b47a16b79d487fadf3f2cc42dd047dac8e8c998d46eb90c0adb811c80159e"
   end
 
   def install
