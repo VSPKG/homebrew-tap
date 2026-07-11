@@ -4,7 +4,7 @@ cask "keygate" do
 
   url "https://github.com/vineelsai26/Keygate/releases/download/v#{version}/Keygate-#{version}-macos.zip"
   name "Keygate"
-  desc "Native macOS SSH key manager with Touch ID and an OpenSSH agent"
+  desc "Native SSH key manager with Touch ID and an OpenSSH agent"
   homepage "https://github.com/vineelsai26/Keygate"
 
   depends_on macos: :sonoma
