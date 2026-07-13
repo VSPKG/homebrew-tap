@@ -1,6 +1,6 @@
 cask "keygate" do
-  version "0.1.0"
-  sha256 "879cc11410f1bd8979cae8bc6578ebc3d61aa21ccb59c0c353534eed7b19fc92"
+  version "0.1.1"
+  sha256 "0a4082f1d31f808fbf1f1c3e2795b82dec98aef74fe629a281c4a5edb8a72624"
 
   url "https://github.com/vineelsai26/Keygate/releases/download/v#{version}/Keygate-#{version}-macos.zip"
   name "Keygate"
