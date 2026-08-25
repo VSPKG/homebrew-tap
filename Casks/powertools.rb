@@ -4,28 +4,29 @@ cask "powertools" do
 
   url "https://github.com/vineelsai26/PowerTools/releases/download/v#{version}/PowerTools-#{version}-macos.zip"
   name "PowerTools"
-  desc "Quality-of-life macOS tweaks: keep-awake, window snapping, clipboard, mouse tuning"
+  desc "Utility suite with system monitoring, backups, SSH keys, and everyday tools"
   homepage "https://github.com/vineelsai26/PowerTools"
 
   depends_on macos: :sonoma
 
   app "PowerTools.app"
 
-  # PowerTools is an independent, locally code-signed build (not notarized), so
-  # macOS quarantines the downloaded copy. Clear the flag so it launches without
-  # a Gatekeeper block.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PowerTools.app"]
-  end
-
+  # PowerTools plus every tool that can also run as its own standalone app.
+  # Vitals, Downpour and Keygate keep the identifiers they shipped under
+  # before they were folded into PowerTools.
   uninstall quit: [
+    "dev.vstack.downpour",
+    "dev.vstack.keygate",
     "dev.vstack.powertools",
-    "dev.vstack.powertools.keepawake",
-    "dev.vstack.powertools.windowsnap",
+    "dev.vstack.powertools.agentusage",
+    "dev.vstack.powertools.audioswitcher",
     "dev.vstack.powertools.clipstack",
+    "dev.vstack.powertools.colorpicker",
+    "dev.vstack.powertools.keepawake",
     "dev.vstack.powertools.mousetuner",
     "dev.vstack.powertools.tweaks",
+    "dev.vstack.powertools.windowsnap",
+    "dev.vstack.vitals",
   ]
 
   zap trash: [
@@ -34,11 +35,12 @@ cask "powertools" do
   ]
 
   caveats <<~EOS
-    PowerTools is not notarized. If the first launch is blocked, right-click
-    PowerTools.app and choose Open (once), or run:
-      xattr -dr com.apple.quarantine "#{appdir}/PowerTools.app"
-
     Mouse Tuner and Window Snap need Accessibility (and Input Monitoring)
     permission, granted per app in System Settings → Privacy & Security.
+    Downpour additionally needs Photos and Full Disk Access.
+
+    PowerTools now includes Vitals, Downpour and Keygate, which were previously
+    separate casks. Remove the old ones with:
+      brew uninstall --cask vitals downpour keygate
   EOS
 end
